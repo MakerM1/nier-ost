@@ -142,6 +142,12 @@ body {
   font-family: sans-serif;
   background-color: rgb(15, 15, 15);
 }
+body .main-text {
+  margin-top: 20px;
+  font-size: 50px;
+  color: rgb(69, 65, 56);
+  text-align: center;
+}
 
 .s1 .container {
   max-width: 1000px;
@@ -233,6 +239,26 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgb(183, 170, 157);
+  font-family: "ITC Benguiat Std", sans-serif;
+}
+.s1 .container .book .paper .front #b1 a,
+.s1 .container .book .paper .back #b1 a {
+  color: black;
+  text-decoration: none;
+}
+.s1 .container .book .paper .front #b1 h1,
+.s1 .container .book .paper .back #b1 h1 {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 15px;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  border-radius: 17% 83% 21% 79%/61% 25% 75% 39%;
+}
+.s1 .container .book .paper .front #b1 h1:hover,
+.s1 .container .book .paper .back #b1 h1:hover {
+  background-color: rgba(143, 128, 113, 0.635);
 }
 .s1 .container .book .paper .front #f1,
 .s1 .container .book .paper .back #f1 {
@@ -267,4 +293,134 @@ body {
 }
 .s1 .container .book #p3 {
   z-index: 1;
+}
+
+.audio-heeader {
+  padding: 20px;
+}
+
+.audio-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+.audio-container .hills {
+  cursor: pointer;
+  max-width: 300px;
+  width: 100%;
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+.audio-container .hills::-webkit-media-controls-panel {
+  background-color: rgb(204, 200, 177);
+  border-radius: 0;
+}
+.audio-container .hills:hover ~ .audio-name {
+  height: 80px;
+  max-width: 300px;
+  bottom: 0px;
+}
+.audio-container .hills:hover ~ .audio-name p {
+  opacity: 1;
+}
+.audio-container .audio-name {
+  height: 0px;
+  max-width: 300px;
+  width: 100%;
+  background-color: rgb(204, 200, 177);
+  position: absolute;
+  z-index: -1;
+  bottom: 14px;
+  border-radius: 30px;
+  padding: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.audio-container .audio-name:hover {
+  height: 80px;
+  max-width: 300px;
+  bottom: 0px;
+}
+.audio-container .audio-name:hover p {
+  opacity: 1;
+}
+.audio-container .audio-name p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.lyrics {
+  margin-top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.lyrics .lyrics-box {
+  background-color: transparent;
+  min-height: 170px;
+  padding: 20px;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid rgb(98, 98, 98);
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.lyrics .lyrics-box p {
+  color: rgb(98, 98, 98);
+  font-size: 18px;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.lyrics .lyrics-box:hover {
+  background-color: rgba(128, 128, 128, 0.05);
+  -webkit-transform: scale(1.009);
+      -ms-transform: scale(1.009);
+          transform: scale(1.009);
+  border: 2px solid white;
+}
+.lyrics .lyrics-box:hover p {
+  color: white;
+}
+.lyrics .lyrics-box.active {
+  background-color: rgb(204, 200, 177);
+  border: 2px solid white;
+}
+.lyrics .lyrics-box.active p {
+  color: black;
+  font-weight: 700;
+  -webkit-text-stroke: 0.2px white;
 }/*# sourceMappingURL=global.css.map */

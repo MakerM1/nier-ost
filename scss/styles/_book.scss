@@ -1,6 +1,13 @@
 body {
     font-family: sans-serif;
-    background-color: rgb(15, 15, 15)
+    background-color: rgb(15, 15, 15);
+
+    .main-text {
+        margin-top: 20px;
+        font-size: 50px;
+        color: rgb(69, 65, 56);
+        text-align: center
+    }
 }
 
 .s1 {
@@ -70,6 +77,27 @@ body {
                         justify-content: center;
                         align-items: center;
                         background-color: rgba(183, 170, 157, 255);
+                        font-family: 'ITC Benguiat Std', sans-serif;
+                    }
+
+                    #b1 {
+                        a {
+                            color: black;
+                            text-decoration: none;
+                        }
+
+                        h1 {
+                            font-size: 20px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            padding: 15px;
+                            transition: all 0.15s;
+                            border-radius: 17% 83% 21% 79% / 61% 25% 75% 39%;
+
+                            &:hover {
+                                background-color: rgba(143, 128, 113, 0.635);
+                            }
+                        }
                     }
 
                     #f1 {

@@ -1,0 +1,270 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(15, 15, 15);
+}
+
+.s1 .container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+.s1 .container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.15s, margin-right 0.6s, margin-left 0.6s, -webkit-transform 0.6s;
+  transition: background-color 0.15s, margin-right 0.6s, margin-left 0.6s, -webkit-transform 0.6s;
+  transition: background-color 0.15s, transform 0.6s, margin-right 0.6s, margin-left 0.6s;
+  transition: background-color 0.15s, transform 0.6s, margin-right 0.6s, margin-left 0.6s, -webkit-transform 0.6s;
+  color: white;
+}
+.s1 .container button:hover {
+  background-color: rgba(65, 65, 65, 0.701);
+}
+.s1 .container .prev-btn {
+  margin-right: 20px;
+}
+.s1 .container .next-btn {
+  margin-left: 20px;
+}
+.s1 .container .book {
+  position: relative;
+  width: 400px;
+  height: 530px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.s1 .container .book .paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+.s1 .container .book .paper .front,
+.s1 .container .book .paper .back {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border-left: 2px solid rgb(15, 15, 15);
+}
+.s1 .container .book .paper .front .front-content,
+.s1 .container .book .paper .front .back-content,
+.s1 .container .book .paper .back .front-content,
+.s1 .container .book .paper .back .back-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(183, 170, 157);
+}
+.s1 .container .book .paper .front #f1,
+.s1 .container .book .paper .back #f1 {
+  background-color: transparent;
+  background-image: url(../images/grimore-wiess.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.s1 .container .book .paper .front .back-content,
+.s1 .container .book .paper .back .back-content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.s1 .container .book .paper .front {
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.s1 .container .book .paper .back {
+  z-index: 0;
+}
+.s1 .container .book .flipped .front,
+.s1 .container .book .flipped .back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.s1 .container .book #p1 {
+  z-index: 3;
+}
+.s1 .container .book #p2 {
+  z-index: 2;
+}
+.s1 .container .book #p3 {
+  z-index: 1;
+}/*# sourceMappingURL=global.css.map */

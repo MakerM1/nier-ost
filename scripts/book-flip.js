@@ -5,17 +5,26 @@ const book = document.querySelector(".book");
 const paper1 = document.querySelector("#p1");
 const paper2 = document.querySelector("#p2");
 const paper3 = document.querySelector("#p3");
+const pageFlipSound = new Audio('../mp3/page-flip.mp3')
 
-prevBtn.addEventListener("click", goPrevPage);
-nextBtn.addEventListener("click", goNextPage);
+prevBtn.addEventListener("click", () => {
+    goPrevPage()
+    pageFlipSound.play()
+});
+nextBtn.addEventListener("click", () => {
+    goNextPage()
+    pageFlipSound.play()
+});
 
 document.body.addEventListener('keydown', () => {
     if (event.key === 'ArrowRight') {
         goNextPage()
+        pageFlipSound.play()
     }
 
     if (event.key === 'ArrowLeft') {
         goPrevPage()
+        pageFlipSound.play()
     }
 })
 

@@ -1,0 +1,218 @@
+header {
+    background-color: rgb(170, 163, 127);
+    padding: 20px;
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    top: 15px;
+    border-radius: 50px;
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 90.51px;
+    max-height: 91px;
+    transition: min-height 0.3s;
+    overflow: hidden;
+
+    @media (max-width: 751px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.active {
+        min-height: 200px;
+
+    }
+
+    .left-side {
+        display: flex;
+        align-items: center;
+
+
+        .main-logo {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-search {
+            display: flex;
+
+
+            .search-box {
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                border-radius: 120px;
+
+                .search {
+                    background-color: transparent;
+                    border: 2px solid white;
+                    padding: 5px 10px;
+                    border-radius: 50px;
+                    margin-right: 10px;
+                    color: white;
+                    max-width: 184px;
+                    width: 100%;
+                    outline: none;
+
+                    &:focus~.search-background {
+                        left: 0;
+                    }
+                }
+
+                .search-background {
+                    max-width: 184px;
+                    width: 100%;
+                    height: 27px;
+                    position: absolute;
+                    background-color: #454138;
+                    z-index: -1;
+                    border-radius: 50px;
+                    left: -184px;
+                    transition: all 0.3s;
+                }
+
+                .fa-magnifying-glass {
+                    transition: all 0.15s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #454138;
+                        transform: scale(1.05);
+                    }
+                }
+
+                i {
+                    color: white;
+                }
+            }
+        }
+
+        @media (max-width: 751px) {
+            max-width: 100%;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .hamburger-menu {
+            display: none;
+            margin-right: 20px;
+            margin-left: 20px;
+
+            .line {
+                width: 20px;
+                height: 3px;
+                background-color: white;
+                margin-bottom: 5px;
+                transition: all 0.2s;
+
+                &:nth-child(3) {
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (max-width: 751px) {
+                display: inline-block;
+            }
+
+            &.active {
+                .line {
+                    &:nth-child(1) {
+                        transform: translateY(8px) rotate(45deg);
+                    }
+
+                    &:nth-child(3) {
+                        transform: translateY(-8px) rotate(-45deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-side {
+        display: flex;
+        align-items: center;
+
+        nav {
+            margin-top: 15px;
+
+            @media (max-width: 751px) {
+                margin-top: 10px;
+                margin-bottom: 40px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            ul {
+                display: flex;
+
+                @media (max-width: 751px) {
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+
+                li {
+                    margin-right: 50px;
+                    position: relative;
+                    transition: all 0.2s;
+
+                    &:nth-child(3) {
+                        @media (max-width: 751px) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .underline,
+                    .underline2,
+                    .underline3 {
+                        height: 2px;
+                        width: 0;
+                        left: -10px;
+                        background-color: #454138;
+                        position: absolute;
+                        bottom: -10px;
+                        transition: all 0.2s;
+                    }
+
+                    &:hover {
+                        .underline {
+                            width: 70px;
+                        }
+
+                        .underline2 {
+                            width: 80px;
+                        }
+
+                        .underline3 {
+                            width: 90px;
+                        }
+
+                        a {
+                            color: #454138;
+                        }
+                    }
+
+                    a {
+                        color: white;
+                        font-weight: 600;
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const book = document.querySelector(".book");
+const bookContainer = document.getElementById('book-container')
 
 const paper1 = document.querySelector("#p1");
 const paper2 = document.querySelector("#p2");
@@ -34,8 +35,7 @@ let maxLocation = numOfPapers + 1;
 
 function openBook() {
     book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-180px)";
-    nextBtn.style.transform = "translateX(180px)";
+    bookContainer.style.justifyContent = 'space-around'
 }
 
 function closeBook(isAtBeginning) {

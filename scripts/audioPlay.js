@@ -22,7 +22,7 @@ audio.addEventListener('play', () => {
     audioCnotainer.style.top = '80%';
     audio.style.maxWidth = '500px'
     Audioname.style.maxWidth = '500px'
-    lyricsSection.style.marginTop = '40px'
+    lyricsSection.style.marginTop = '120px'
     console.log('playing')
     background.classList.add('Background-active')
 

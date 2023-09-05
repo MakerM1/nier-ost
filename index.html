@@ -17,55 +17,86 @@
   </head>
   <body>
     <header>
-      <h1 class="main-text">Choose a Song!</h1>
-    </header>
-    <section class="s1">
-      <div class="container">
-        <button class="prev-btn">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <div class="book">
-          <div id="p1" class="paper">
-            <div class="front">
-              <div id="f1" class="front-content"></div>
-            </div>
-            <div class="back">
-              <div id="b1" class="back-content">
-                <a href="pages/HillsOfRadiantWind.html">
-                  <h1>Hills of Radiant Wind</h1>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div id="p2" class="paper">
-            <div class="front">
-              <div id="f2" class="front-content">
-                <h1>Front 2</h1>
-              </div>
-            </div>
-            <div class="back">
-              <div id="b2" class="back-content">
-                <h1>Back 2</h1>
-              </div>
-            </div>
-          </div>
-          <div id="p3" class="paper">
-            <div class="front">
-              <div id="f3" class="front-content">
-                <h1>Front 3</h1>
-              </div>
-            </div>
-            <div class="back">
-              <div id="b3" class="back-content">
-                <h1>Back 3</h1>
-              </div>
-            </div>
+      <div class="left-side">
+        <div class="logo-search">
+          <img src="images/main-logo.png" alt="" class="main-logo" />
+          <div class="search-box" id="search-cont">
+            <input type="text" class="search" id="search-bar" />
+            <div class="search-background"></div>
+            <i class="fa-solid fa-magnifying-glass" id="search"></i>
           </div>
         </div>
-        <button class="next-btn">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
+        <div class="hamburger-menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="right-side">
+        <nav>
+          <ul>
+            <li>
+              <a href="">HOME</a>
+              <div class="underline"></div>
+            </li>
+            <li>
+              <a href="">ABOUT</a>
+              <div class="underline2"></div>
+            </li>
+            <li>
+              <a href="">SOURCE</a>
+              <div class="underline3"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <section class="s1">
+      <div class="container">
+        <div class="music-row" id="section">
+          <a href="pages/HillsOfRadiantWind.html">
+            <div class="song" class="location1">
+              <img src="images/cover1.jpg" alt="" />
+              <div class="song-name">
+                <img src="images/wave-haikei.svg" alt="" class="name-back" />
+                <h5 class="location">Hills Of Radiant Wind</h5>
+              </div>
+              <div class="logo">
+                <img src="images/wave-haikei (1).svg" alt="" class="top" />
+                <img
+                  src="images/replicant-logo.svg"
+                  alt=""
+                  class="replicant-logo"
+                />
+              </div>
+            </div>
+          </a>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+          <div class="song" class="location1">
+            <h5 class="location">Lorem ipsum dolor sit amet.</h5>
+          </div>
+        </div>
       </div>
     </section>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/hamburger-menu.js"></script>
   </body>
 </html>

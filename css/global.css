@@ -142,6 +142,7 @@ body {
   font-family: sans-serif;
   background-color: rgb(15, 15, 15);
   position: relative;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -605,6 +606,10 @@ body .main-text {
   padding: 20px;
 }
 
+.audio-section {
+  padding: 20px;
+}
+
 .audio-container {
   max-width: 500px;
   width: 100%;
@@ -692,7 +697,9 @@ body .main-text {
           flex-direction: column;
   -webkit-transition: margin-top 0.3s;
   transition: margin-top 0.3s;
-  padding: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgb(90, 90, 90);
 }
 .lyrics .lyrics-box {
   max-width: 646px;
@@ -766,6 +773,9 @@ body .main-text {
           transform: scale(1.1);
   background-color: rgb(204, 200, 177);
   border: 2px solid white;
+}
+.lyrics .lyrics-box.active .time {
+  color: white;
 }
 @-webkit-keyframes active {
   from {
@@ -848,6 +858,130 @@ body .main-text {
     font-weight: 700;
     -webkit-text-stroke: 0.2px white;
   }
+}
+
+.extra-info {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 50px;
+}
+.extra-info .extra-info-box {
+  max-width: 1190px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: text-align 0.3s;
+  transition: text-align 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: 110px;
+}
+.extra-info .extra-info-box h5 {
+  color: gray;
+  display: inline-block;
+  margin-bottom: 20px;
+  width: auto;
+}
+.extra-info .extra-info-box p {
+  color: gray;
+  opacity: 0;
+  max-width: 900px;
+  width: 100%;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  height: auto;
+  height: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  visibility: hidden;
+}
+.extra-info .extra-info-box p.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  height: auto;
+}
+.extra-info .extra-info-box .arrow button {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px;
+  border: none;
+  text-align: center;
+  position: absolute;
+  bottom: auto;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: -20px;
+  -webkit-transition: bottom 0.3s, -webkit-transform 0.3s;
+  transition: bottom 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, bottom 0.3s;
+  transition: transform 0.3s, bottom 0.3s, -webkit-transform 0.3s;
+  background: transparent;
+  cursor: pointer;
+}
+.extra-info .extra-info-box .arrow button.active {
+  top: auto;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.extra-info .extra-info-box .arrow button.active i {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.extra-info .extra-info-box .arrow button:hover {
+  background-color: rgba(92, 92, 92, 0.376);
+}
+.extra-info .extra-info-box .arrow button i {
+  color: gray;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 20px;
+}
+.extra-info .extra-info-box .arrow .line {
+  height: 1px;
+  width: 60px;
+  position: absolute;
+  background-color: gray;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, bottom 0.3s;
+  transition: opacity 0.3s, bottom 0.3s;
+}
+.extra-info .extra-info-box .arrow .line.active {
+  top: auto;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  opacity: 1;
 }
 
 header {

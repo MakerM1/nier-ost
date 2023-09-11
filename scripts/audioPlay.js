@@ -204,13 +204,3 @@ lyrics10.addEventListener('click', () => {
 
 
 
-
-
-
-window.addEventListener('scroll', () => {
-    console.log(scrollY)
-
-    if (scrollY >= 1300) {
-
-    }
-})

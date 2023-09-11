@@ -12,6 +12,10 @@
       src="https://kit.fontawesome.com/2d3e948390.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/2d3e948390.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/global.css" />
   </head>
   <body id="hills-body">
@@ -52,7 +56,7 @@
         <nav>
           <ul>
             <li>
-              <a href="">HOME</a>
+              <a href="../index.html">HOME</a>
               <div class="underline"></div>
             </li>
             <li>
@@ -67,19 +71,21 @@
         </nav>
       </div>
     </header>
-    <div class="audio-container" id="a-cont">
-      <audio
-        src="../mp3/Hills-of-radiant-wind.mp3"
-        controls
-        loop
-        controlsList="nodownload noplaybackrate"
-        class="hills"
-        id="hills"
-      ></audio>
-      <div class="audio-name" id="audio-name">
-        <p>Hills of Radiant Wind</p>
+    <section class="audio-section">
+      <div class="audio-container" id="a-cont">
+        <audio
+          src="../mp3/Hills-of-radiant-wind.mp3"
+          controls
+          loop
+          controlsList="nodownload noplaybackrate"
+          class="hills"
+          id="hills"
+        ></audio>
+        <div class="audio-name" id="audio-name">
+          <p>Hills of Radiant Wind</p>
+        </div>
       </div>
-    </div>
+    </section>
     <section class="lyrics" id="lyrics">
       <div class="lyrics-box" id="lyrics-box1">
         <p class="lyrics-words">Yupravai aefrosekili nyafrar visamfir</p>
@@ -132,6 +138,34 @@
         <h5 class="time">1:19</h5>
       </div>
     </section>
+    <section class="extra-info">
+      <div class="extra-info-box" id="extra-info-box">
+        <h5>Where To Find:</h5>
+        <div class="arrow">
+          <button id="extra-button">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="line" class="line"></div>
+        </div>
+        <p id="find">
+          Disc 1 Track 3 of the Nier: Replicant/Gestalt soundtrack. Disc 1 Track
+          1 of the Nier: Replicant ver.1.22474487139... soundtrack.
+        </p>
+      </div>
+      <div class="extra-info-box" id="extra-info-box2">
+        <h5>Notes:</h5>
+        <div class="arrow">
+          <button id="extra-button2">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="line2" class="line"></div>
+        </div>
+        <p id="find2">No Notes.</p>
+      </div>
+    </section>
+    <div class="overlay"></div>
     <script src="../scripts/audioPlay.js"></script>
+    <script src="../scripts/hamburger-menu.js"></script>
+    <script src="../scripts/extra.js"></script>
   </body>
 </html>

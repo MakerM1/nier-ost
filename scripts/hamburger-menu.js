@@ -8,6 +8,13 @@ hamburgerMenu.addEventListener('click', () => {
     header.classList.toggle('active')
     overlay.classList.toggle('active')
     nav.classList.toggle('active')
+    
+    if (audioCnotainer.style.top !== '80%' && header.classList.contains('active')) {
+        audioCnotainer.style.transition = 'top 0.3s'
+        audioCnotainer.style.top = '190px'
+    } else if (audioCnotainer.style.top !== '80%' && !header.classList.contains('active')) {
+        audioCnotainer.style.top = '80px'
+    }
 })
 
 overlay.addEventListener('click', () => {

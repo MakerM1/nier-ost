@@ -1052,38 +1052,55 @@ header .left-side .logo-search .search-box {
           align-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: 120px;
+  z-index: 10;
+  max-width: 300px;
+  width: 100%;
+  white-space: nowrap;
+}
+header .left-side .logo-search .search-box .search-background-box {
+  max-width: 184px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+header .left-side .logo-search .search-box .search-background-box .search-background {
+  max-width: 184px;
+  width: 100%;
+  height: 29.2px;
+  position: absolute;
+  background-color: #454138;
+  z-index: -5;
+  top: 0;
+  border-radius: 50px;
+  left: -184px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header .left-side .logo-search .search-box .search {
   background-color: transparent;
   border: 2px solid white;
   padding: 5px 10px;
   border-radius: 50px;
-  margin-right: 10px;
   color: white;
   max-width: 184px;
   width: 100%;
   outline: none;
+  overflow: hidden;
+  vertical-align: middle;
 }
 header .left-side .logo-search .search-box .search:focus ~ .search-background {
   left: 0;
 }
-header .left-side .logo-search .search-box .search-background {
-  max-width: 184px;
-  width: 100%;
-  height: 27px;
-  position: absolute;
-  background-color: #454138;
-  z-index: -1;
-  border-radius: 50px;
-  left: -184px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
 header .left-side .logo-search .search-box .fa-magnifying-glass {
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
+  max-width: 16px;
+  width: 100%;
   cursor: pointer;
+  display: inline-block;
 }
 header .left-side .logo-search .search-box .fa-magnifying-glass:hover {
   color: #454138;

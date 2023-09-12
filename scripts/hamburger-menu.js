@@ -21,4 +21,6 @@ overlay.addEventListener('click', () => {
     hamburgerMenu.classList.remove('active')
     header.classList.remove('active')
     overlay.classList.remove('active')
+    nav.classList.remove('active')
+    audioCnotainer.style.top = '80px'
 })

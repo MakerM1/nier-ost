@@ -56,7 +56,8 @@ body {
                 transition: all 0.2s;
                 opacity: 0.9;
 
-                &:nth-child(1) {
+                &:nth-child(1),
+                &:nth-child(2) {
                     border: 2px solid transparent;
                 }
 
@@ -70,6 +71,7 @@ body {
                     width: 250px;
                     height: 250px;
                     object-fit: cover;
+                    pointer-events: none;
                 }
 
                 .song-name {

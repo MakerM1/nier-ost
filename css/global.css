@@ -235,7 +235,7 @@ body .main-text {
   transition: all 0.2s;
   opacity: 0.9;
 }
-.s1 .container .music-row .song:nth-child(1) {
+.s1 .container .music-row .song:nth-child(1), .s1 .container .music-row .song:nth-child(2) {
   border: 2px solid transparent;
 }
 .s1 .container .music-row .song:hover {
@@ -250,6 +250,7 @@ body .main-text {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
+  pointer-events: none;
 }
 .s1 .container .music-row .song .song-name {
   position: absolute;

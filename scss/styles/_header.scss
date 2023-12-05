@@ -177,20 +177,30 @@ header {
 
             ul {
                 display: flex;
+                justify-content: space-around;
 
                 @media (max-width: 751px) {
-                    flex-wrap: wrap;
-                    justify-content: space-around;
+                    display: grid;
+                    text-align: center;
+                    grid-template-columns: 1fr 1fr;
                 }
 
                 li {
-                    margin-right: 50px;
+
                     position: relative;
                     transition: all 0.2s;
+                    margin-right: 30px;
 
                     &:nth-child(3) {
-                        @media (max-width: 751px) {
-                            margin-right: 0;
+                        margin-right: 20px;
+                    }
+
+                    @media (max-width: 751px) {
+
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            margin-bottom: 30px;
+                            margin-top: 20px;
                         }
                     }
 
